@@ -1,24 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weather App
 
-## Getting Started
+## Overview
+The **Weather App** is a React-based web application that provides real-time weather information for any location worldwide. Users can search for a city to view key weather metrics, including temperature, humidity, wind speed, and overall conditions.
 
-First, run the development server:
+## Features
+- Search for weather details of any city globally
+- Displays temperature, humidity, wind speed, and weather conditions
+- User-friendly and responsive interface
+- Real-time data retrieval using an external API
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies Used
+- **React.js** - Frontend framework for building the user interface
+- **CSS** - Styling the application
+- **OpenWeather API** - Fetching real-time weather data
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation & Setup
+1. **Clone the Repository**
+   ```sh
+   git clone https://github.com/aaditi72/Weather-App.git
+   cd Weather-App
+   ```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+2. **Install Dependencies**
+   ```sh
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Obtain an API Key**
+   - Register at [OpenWeather](https://openweathermap.org/) to obtain an API key.
+   - Create a `.env` file in the project root and add the following line:
+     ```sh
+     REACT_APP_WEATHER_API_KEY=your_api_key_here
+     ```
+
+4. **Run the Application**
+   ```sh
+   npm start
+   ```
+   The application will be accessible at `http://localhost:3000/`
+
+## Future Enhancements
+- Integrate geolocation to fetch weather data for the user's current location
+- Display a 7-day weather forecast
+- Implement light and dark mode for an improved user experience
+
+## Contribution Guidelines
+Contributions are welcome! If you would like to improve the application, feel free to submit a pull request or report issues.
+
+## License
+This project is licensed under the **MIT License**.
+
 
 ## Learn More
 
