@@ -47,6 +47,3 @@ The **Weather App** is a React-based web application that provides real-time wea
 ## Contribution Guidelines
 Contributions are welcome! If you would like to improve the application, feel free to submit a pull request or report issues.
 
-## License
-This project is licensed under the **MIT License**.
-
