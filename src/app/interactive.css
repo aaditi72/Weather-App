@@ -1,0 +1,196 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1517574150334-6d3578f2cc5a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* Main Container */
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Input Field */
+input {
+  width: 300px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.573);
+}
+
+input:focus {
+  border-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Button Styles */
+.button {
+  background: linear-gradient(135deg, #ff7f50, #ff4500);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ff4500, #ff7f50);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Weather Card */
+.bg-white {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.bg-white h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #4e8de8;
+}
+
+.bg-white p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+/* Animated Loading */
+p {
+  font-size: 1.1rem;
+}
+
+p.loading::after {
+  content: " ⏳";
+  animation: loadingDots 1.5s infinite;
+}
+
+@keyframes loadingDots {
+  0% {
+    content: " ⏳";
+  }
+  33% {
+    content: " ⌛";
+  }
+  66% {
+    content: " ⏳";
+  }
+  100% {
+    content: " ⌛";
+  }
+}
+
+/* Error Message */
+.text-red-500 {
+  color: #e63946;
+  font-weight: 600;
+  font-size: 1rem;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Keyframes for Weather Card Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  input {
+    width: 250px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .bg-white {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
